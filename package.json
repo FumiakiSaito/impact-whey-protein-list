@@ -1,0 +1,23 @@
+{
+  "name": "impact-whey-protein-list",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FumiakiSaito/impact-whey-protein-list.git"
+  },
+  "author": "FumiakiSaito",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FumiakiSaito/impact-whey-protein-list/issues"
+  },
+  "homepage": "https://github.com/FumiakiSaito/impact-whey-protein-list#readme",
+  "dependencies": {
+    "puppeteer": "^10.2.0",
+    "puppeteer-core": "^10.2.0"
+  }
+}
