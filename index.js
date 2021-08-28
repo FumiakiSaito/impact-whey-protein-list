@@ -4,7 +4,10 @@ const puppeteer = require("puppeteer");
   const browser = await puppeteer.launch();
   const page = await browser.newPage();
   await page.goto(
+    // WPC
     "https://www.myprotein.jp/sports-nutrition/impact-whey-protein/10530943.html"
+    // WPI
+    //"https://www.myprotein.jp/sports-nutrition/impact-whey-isolate/10530911.html"
   );
 
   // フレーバー名の一覧
