@@ -75,6 +75,7 @@ const puppeteer = require("puppeteer");
         );
         detail.capacityText = capacityText
           .replace(/\r?\n/g, "")
+          .replace(/ /g, "")
           .replace(/選択した/g, "");
 
         //await page.screenshot({ path: "screenshot/" + value + ".png" });
@@ -96,7 +97,11 @@ const puppeteer = require("puppeteer");
           return priceText;
         });
         detail.priceText = priceText;
-        console.log(detail);
+
+        //console.log(detail);
+        console.log(
+          `${detail.fravarText},${detail.capacityText},${detail.priceText}`
+        );
       }
     }
   }
