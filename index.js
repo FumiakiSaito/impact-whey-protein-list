@@ -1,7 +1,17 @@
 const puppeteer = require("puppeteer");
 
 (async () => {
-  const browser = await puppeteer.launch();
+  const browser = await puppeteer.launch({
+    // ブラウザを表示するか？
+    headless: true,
+    //slowMo: 1000,
+    defaultViewport: {
+      width: 1920,
+      height: 1080,
+    },
+    timeout: 10000,
+    args: ["--incognito"],
+  });
   const page = await browser.newPage();
   await page.goto(
     // WPC
@@ -96,7 +106,7 @@ const puppeteer = require("puppeteer");
           const priceText = price.innerText;
           return priceText;
         });
-        detail.priceText = priceText;
+        detail.priceText = priceText.replace(/\r?\n/g, "");
 
         //console.log(detail);
         console.log(
