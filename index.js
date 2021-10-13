@@ -2,7 +2,7 @@ const puppeteer = require("puppeteer");
 
 (async () => {
   const browser = await puppeteer.launch({
-    headless: true,
+    headless: true, // falseにするとブラウザが起動する
     //slowMo: 1000,
     defaultViewport: {
       width: 1920,
